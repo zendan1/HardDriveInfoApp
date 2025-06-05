@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168092018206",
+    "project_id": "harddriveinfoapp",
+    "storage_bucket": "harddriveinfoapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168092018206:android:e7ef65fe39d699f48a700f",
+        "android_client_info": {
+          "package_name": "com.example.harddriveinfoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRNaefv8TAqkPB7K9EOFiZ0jNzY8U-YQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

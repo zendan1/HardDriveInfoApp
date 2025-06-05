@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Картинка диска -->
+        <ImageView
+            android:id="@+id/ivDriveImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Drive Image"
+            android:src="@drawable/ic_placeholder" />
+
+        <!-- Название диска -->
+        <TextView
+            android:id="@+id/tvDriveName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivDriveImage"
+            android:layout_marginStart="16dp"
+            android:text="Название диска"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_alignTop="@id/ivDriveImage" />
+
+        <!-- Цена диска -->
+        <TextView
+            android:id="@+id/tvDrivePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDriveName"
+            android:layout_toEndOf="@id/ivDriveImage"
+            android:layout_marginStart="16dp"
+            android:text="3500 руб."
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

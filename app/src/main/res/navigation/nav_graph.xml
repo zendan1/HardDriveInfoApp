@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authFragment">
+
+    <!-- 1) Экран авторизации -->
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.harddriveinfoapp.AuthFragment"
+        android:label="Авторизация"
+        tools:layout="@layout/fragment_auth">
+
+        <action
+            android:id="@+id/action_authFragment_to_hddListFragment"
+            app:destination="@id/hddListFragment"
+            app:popUpTo="@id/authFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+
+    <!-- 2) Экран списка HDD -->
+    <fragment
+        android:id="@+id/hddListFragment"
+        android:name="com.example.harddriveinfoapp.HddListFragment"
+        android:label="HDD"
+        tools:layout="@layout/fragment_hdd_list">
+        <!-- Переход к деталям диска -->
+        <action
+            android:id="@+id/action_hddListFragment_to_driveDetailFragment"
+            app:destination="@id/driveDetailFragment" />
+        <!-- Опционально: переход к экрану добавления нового диска -->
+        <action
+            android:id="@+id/action_hddListFragment_to_addDriveFragment"
+            app:destination="@id/addDriveFragment" />
+    </fragment>
+
+    <!-- 3) Экран списка SSD SATA -->
+    <fragment
+        android:id="@+id/ssdSataListFragment"
+        android:name="com.example.harddriveinfoapp.SsdSataListFragment"
+        android:label="SSD SATA"
+        tools:layout="@layout/fragment_ssd_sata_list">
+        <action
+            android:id="@+id/action_ssdSataListFragment_to_driveDetailFragment"
+            app:destination="@id/driveDetailFragment" />
+        <action
+            android:id="@+id/action_ssdSataListFragment_to_addDriveFragment"
+            app:destination="@id/addDriveFragment" />
+    </fragment>
+
+    <!-- 4) Экран списка SSD M.2 -->
+    <fragment
+        android:id="@+id/ssdM2ListFragment"
+        android:name="com.example.harddriveinfoapp.SsdM2ListFragment"
+        android:label="SSD M.2"
+        tools:layout="@layout/fragment_ssd_m2_list">
+        <action
+            android:id="@+id/action_ssdM2ListFragment_to_driveDetailFragment"
+            app:destination="@id/driveDetailFragment" />
+        <action
+            android:id="@+id/action_ssdM2ListFragment_to_addDriveFragment"
+            app:destination="@id/addDriveFragment" />
+    </fragment>
+
+    <!-- 5) Экран Tier-листа -->
+    <fragment
+        android:id="@+id/tierListFragment"
+        android:name="com.example.harddriveinfoapp.TierListFragment"
+        android:label="Tier-лист"
+        tools:layout="@layout/fragment_tier_list">
+        <action
+            android:id="@+id/action_tierListFragment_to_driveDetailFragment"
+            app:destination="@id/driveDetailFragment" />
+    </fragment>
+
+    <!-- 6) Экран «Детали диска» -->
+    <fragment
+        android:id="@+id/driveDetailFragment"
+        android:name="com.example.harddriveinfoapp.DriveDetailFragment"
+        android:label="Детали диска"
+        tools:layout="@layout/fragment_drive_detail">
+        <argument
+            android:name="driveId"
+            app:argType="string" />
+    </fragment>
+
+
+    <!-- 7) (Опционально) Экран «Добавить диск» -->
+    <fragment
+        android:id="@+id/addDriveFragment"
+        android:name="com.example.harddriveinfoapp.AddDriveFragment"
+        android:label="Добавить диск"
+        tools:layout="@layout/fragment_add_drive" />
+</navigation>

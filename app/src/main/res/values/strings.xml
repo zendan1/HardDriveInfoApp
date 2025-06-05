@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HardDriveInfoApp</string>
+    <string-array name="tier_values">
+        <item>S</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+</resources>

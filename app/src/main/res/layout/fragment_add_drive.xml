@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Название -->
+        <EditText
+            android:id="@+id/etDriveName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Название модели"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Тип: HDD / SSD_SATA / SSD_M2 -->
+        <TextView
+            android:id="@+id/tvSelectType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Тип"></TextView>
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Цена -->
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Цена"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+        <!-- URL Картинки -->
+        <EditText
+            android:id="@+id/etImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL картинки"
+            android:inputType="textUri"
+            android:layout_marginBottom="12dp" />
+
+        <!-- URL Товара -->
+        <EditText
+            android:id="@+id/etProductUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL товара"
+            android:inputType="textUri"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Характеристики (одна TextView, куда через enter вводим пары) -->
+        <TextView
+            android:id="@+id/tvSpecsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Характеристики (каждую пару на новой строке, через двоеточие)" />
+        <EditText
+            android:id="@+id/etSpecs"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:hint="Capacity: 1 TB\nInterface: SATA III"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSaveDrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить диск" />
+
+        <ProgressBar
+            android:id="@+id/progressAddDrive"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvAddDriveError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+</ScrollView>

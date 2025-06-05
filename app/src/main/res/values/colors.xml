@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="md_dark_background">#121212</color>
+    <color name="md_dark_surface">#1F1F1F</color>
+    <color name="md_dark_primary">#BB86FC</color>
+    <color name="md_dark_primary_variant">#3700B3</color>
+    <color name="md_dark_accent">#03DAC6</color>
+    <color name="md_dark_gray_600">#757575</color>
+    <color name="md_dark_gray_500">#9E9E9E</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_alpha_70">#B3FFFFFF</color>
+    <color name="purple">#50000000</color>
+    <color name="redDelete">#CC0000</color>
+    <color name="grey">#7A7070</color>
+</resources>

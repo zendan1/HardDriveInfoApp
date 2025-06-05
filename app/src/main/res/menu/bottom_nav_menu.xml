@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/hddListFragment"
+        android:icon="@drawable/hdd"
+        android:title="HDD" />
+
+    <item
+        android:id="@+id/ssdSataListFragment"
+        android:icon="@drawable/ssd_sata"
+        android:title="SSD SATA" />
+
+    <item
+        android:id="@+id/ssdM2ListFragment"
+        android:icon="@drawable/ssd_m2"
+        android:title="SSD M.2" />
+
+    <item
+        android:id="@+id/tierListFragment"
+        android:icon="@drawable/tier_list"
+        android:title="Tier-лист" />
+</menu>

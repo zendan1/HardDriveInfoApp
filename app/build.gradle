@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'com.example.harddriveinfoapp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.harddriveinfoapp"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    // Navigation Component (Java)
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation platform('com.google.firebase:firebase-bom:33.14.0')
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:21.3.0'
+    // Firebase Cloud Firestore
+    implementation 'com.google.firebase:firebase-firestore:24.7.1'
+    // (если понадобятся картинки из Firebase Storage)
+    implementation 'com.google.firebase:firebase-storage:20.2.1'
+
+    // Библиотека для загрузки изображений из URL (рекомендую Glide)
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+
+    // (Если захотите использовать SwipeRefreshLayout для обновления списков)
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+}
